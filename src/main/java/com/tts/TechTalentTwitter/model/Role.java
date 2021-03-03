@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Data
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,4 +17,20 @@ public class Role {
     @Column(name = "role_id")
     private Long id;
     private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id=" + id +
+                ", role='" + role + '\'' +
+                '}';
+    }
 }

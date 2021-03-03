@@ -10,8 +10,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Value;
+
+import javax.sql.DataSource;
 
 
 @Configuration
@@ -21,8 +23,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Autowired
-    private DataSource dataSource;
+ @Autowired
+ private DataSource dataSource;
+
 
     @Value("${spring.queries.users-query}")
     private String usersQuery;
